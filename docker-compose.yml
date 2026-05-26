@@ -1,0 +1,37 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: slsec-forum-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: slsec_forum_root
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: slsec_forum
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-pslsec_forum_root"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 60s
+
+  server:
+    image: slsec-forum-server
+    container_name: slsec-forum-server
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    environment:
+      DATABASE_URL: mysql://root:slsec_forum_root@mysql:3306/slsec_forum
+      JWT_SECRET: slsec-jwt-secret-change-me
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql_data:

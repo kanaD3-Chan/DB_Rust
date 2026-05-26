@@ -1,0 +1,7 @@
+FROM archlinux:latest
+RUN pacman -Sy --noconfirm openssl ca-certificates libgcc
+WORKDIR /app
+COPY target/release/forum-server .
+COPY server/sql ./server/sql
+EXPOSE 3000
+CMD ["./forum-server"]
