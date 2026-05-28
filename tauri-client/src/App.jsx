@@ -18,7 +18,11 @@ function ThemeSwitcher() {
           key={t.id}
           className={`theme-dot ${theme === t.id ? 'active' : ''}`}
           title={t.label}
-          style={{ background: t.color, borderColor: theme === t.id ? t.border : 'transparent' }}
+          style={{
+            background: t.dot || t.color,
+            borderColor: theme === t.id ? t.border : 'transparent',
+            boxShadow: theme === t.id ? `0 0 0 1px ${t.border}40` : 'none',
+          }}
           onClick={() => setTheme(t.id)}
         />
       ))}

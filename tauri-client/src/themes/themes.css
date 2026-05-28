@@ -1,13 +1,19 @@
+/* ═══════════════════════════════════════════════════
+   THEME SYSTEM — 4 themes
+   apple-light | apple-dark | frutiger-aero | cyberpunk
+   ═══════════════════════════════════════════════════ */
+
 /* ── Apple Light ── */
 [data-theme="apple-light"] {
-  --bg: #f5f5f7;
-  --bg-solid: #f5f5f7;
-  --bg-card: rgba(255,255,255,0.85);
-  --bg-sidebar: rgba(255,255,255,0.72);
-  --bg-input: rgba(255,255,255,0.9);
+  --bg: #f2f2f7;
+  --bg-solid: #f2f2f7;
+  --bg-card: rgba(255,255,255,0.92);
+  --bg-sidebar: rgba(242,242,247,0.88);
+  --bg-input: rgba(255,255,255,1);
   --bg-hover: rgba(0,0,0,0.04);
-  --bg-active: rgba(0,122,255,0.1);
-  --border: rgba(0,0,0,0.1);
+  --bg-active: rgba(0,122,255,0.08);
+  --border: rgba(0,0,0,0.09);
+  --border-input: rgba(0,0,0,0.14);
   --text: #1d1d1f;
   --text-secondary: #6e6e73;
   --text-tertiary: #aeaeb2;
@@ -16,126 +22,150 @@
   --accent-text: #fff;
   --danger: #ff3b30;
   --success: #34c759;
-  --tag-bg: rgba(0,122,255,0.1);
+  --warning: #ff9f0a;
+  --tag-bg: rgba(0,122,255,0.08);
   --tag-text: #007aff;
-  --shadow: 0 2px 20px rgba(0,0,0,0.08);
-  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
-  --radius: 12px;
-  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --shadow-card: 0 1px 1px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-elevated: 0 4px 24px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.06);
+  --radius: 13px;
+  --radius-sm: 9px;
   --radius-btn: 980px;
-  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
   --blur: blur(20px) saturate(180%);
-  --topbar-bg: rgba(255,255,255,0.72);
+  --topbar-bg: rgba(242,242,247,0.82);
   --topbar-border: rgba(0,0,0,0.08);
-  --scrollbar: rgba(0,0,0,0.2);
+  --scrollbar: rgba(0,0,0,0.18);
   --bg-code: #f6f8fa;
+  --input-shadow-focus: 0 0 0 3.5px rgba(0,122,255,0.18);
+  --sidebar-width: 200px;
 }
 
 /* ── Apple Dark ── */
 [data-theme="apple-dark"] {
-  --bg: #000;
-  --bg-solid: #000;
-  --bg-card: rgba(28,28,30,0.9);
-  --bg-sidebar: rgba(18,18,18,0.85);
-  --bg-input: rgba(44,44,46,0.9);
-  --bg-hover: rgba(255,255,255,0.06);
-  --bg-active: rgba(10,132,255,0.15);
-  --border: rgba(255,255,255,0.1);
+  --bg: #000000;
+  --bg-solid: #000000;
+  --bg-card: rgba(28,28,30,0.95);
+  --bg-sidebar: rgba(18,18,18,0.92);
+  --bg-input: rgba(44,44,46,1);
+  --bg-hover: rgba(255,255,255,0.05);
+  --bg-active: rgba(10,132,255,0.14);
+  --border: rgba(255,255,255,0.09);
+  --border-input: rgba(255,255,255,0.14);
   --text: #f5f5f7;
   --text-secondary: #98989d;
-  --text-tertiary: #636366;
+  --text-tertiary: #48484a;
   --accent: #0a84ff;
   --accent-hover: #409cff;
   --accent-text: #fff;
   --danger: #ff453a;
   --success: #30d158;
-  --tag-bg: rgba(10,132,255,0.15);
-  --tag-text: #0a84ff;
-  --shadow: 0 2px 20px rgba(0,0,0,0.4);
-  --shadow-card: 0 1px 3px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.2);
-  --radius: 12px;
-  --radius-sm: 8px;
+  --warning: #ffd60a;
+  --tag-bg: rgba(10,132,255,0.14);
+  --tag-text: #409cff;
+  --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-card: 0 1px 1px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.25);
+  --shadow-elevated: 0 4px 24px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3);
+  --radius: 13px;
+  --radius-sm: 9px;
   --radius-btn: 980px;
-  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
   --blur: blur(20px) saturate(180%);
-  --topbar-bg: rgba(18,18,18,0.85);
-  --topbar-border: rgba(255,255,255,0.08);
-  --scrollbar: rgba(255,255,255,0.2);
-  --bg-code: #161b22;
-}
-
-/* ── Cyberpunk ── */
-[data-theme="cyberpunk"] {
-  --bg: #0a0a0f;
-  --bg-solid: #0a0a0f;
-  --bg-card: rgba(10,10,20,0.95);
-  --bg-sidebar: rgba(5,5,15,0.98);
-  --bg-input: rgba(20,20,35,0.9);
-  --bg-hover: rgba(0,255,255,0.04);
-  --bg-active: rgba(0,255,255,0.08);
-  --border: rgba(0,255,255,0.2);
-  --text: #e0f0ff;
-  --text-secondary: #7090a0;
-  --text-tertiary: #405060;
-  --accent: #00ffff;
-  --accent-hover: #00e5e5;
-  --accent-text: #000;
-  --danger: #ff003c;
-  --success: #00ff9f;
-  --tag-bg: rgba(0,255,255,0.08);
-  --tag-text: #00ffff;
-  --shadow: 0 0 20px rgba(0,255,255,0.1), 0 0 60px rgba(0,255,255,0.05);
-  --shadow-card: 0 0 1px rgba(0,255,255,0.3), 0 4px 20px rgba(0,0,0,0.8);
-  --radius: 2px;
-  --radius-sm: 2px;
-  --radius-btn: 2px;
-  --font: 'Share Tech Mono', 'Courier New', monospace;
-  --blur: none;
-  --topbar-bg: rgba(5,5,15,0.98);
-  --topbar-border: rgba(0,255,255,0.3);
-  --scrollbar: rgba(0,255,255,0.3);
-  --bg-code: rgba(0,10,20,0.95);
-  --glow: 0 0 8px rgba(0,255,255,0.6);
-  --glow-danger: 0 0 8px rgba(255,0,60,0.6);
-  --scanline: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0,255,255,0.015) 2px,
-    rgba(0,255,255,0.015) 4px
-  );
+  --topbar-bg: rgba(18,18,18,0.88);
+  --topbar-border: rgba(255,255,255,0.07);
+  --scrollbar: rgba(255,255,255,0.18);
+  --bg-code: #1c1c1e;
+  --input-shadow-focus: 0 0 0 3.5px rgba(10,132,255,0.22);
+  --sidebar-width: 200px;
 }
 
 /* ── Frutiger Aero ── */
 [data-theme="frutiger-aero"] {
-  --bg: linear-gradient(135deg, #a8d8ea 0%, #c8e6c9 40%, #b3e5fc 70%, #e1f5fe 100%);
+  --bg: #b8dff0;
   --bg-solid: #b8dff0;
-  --bg-card: rgba(255,255,255,0.65);
-  --bg-sidebar: rgba(200,235,255,0.7);
-  --bg-input: rgba(255,255,255,0.8);
-  --bg-hover: rgba(255,255,255,0.3);
-  --bg-active: rgba(100,180,255,0.2);
-  --border: rgba(255,255,255,0.6);
-  --text: #1a3a4a;
-  --text-secondary: #3a6a7a;
-  --text-tertiary: #6a9aaa;
-  --accent: #0088cc;
-  --accent-hover: #006699;
+  --bg-card: rgba(255,255,255,0.58);
+  --bg-sidebar: rgba(180,225,255,0.62);
+  --bg-input: rgba(255,255,255,0.82);
+  --bg-hover: rgba(255,255,255,0.35);
+  --bg-active: rgba(80,170,255,0.18);
+  --border: rgba(255,255,255,0.65);
+  --border-input: rgba(120,190,240,0.5);
+  --text: #0d2b3e;
+  --text-secondary: #2a5a72;
+  --text-tertiary: #6a9ab0;
+  --accent: #0077bb;
+  --accent-hover: #005a99;
   --accent-text: #fff;
   --danger: #cc2200;
-  --success: #228833;
-  --tag-bg: rgba(0,136,204,0.12);
-  --tag-text: #0066aa;
-  --shadow: 0 4px 30px rgba(0,100,180,0.15), 0 1px 0 rgba(255,255,255,0.8) inset;
-  --shadow-card: 0 8px 32px rgba(0,80,160,0.12), 0 1px 0 rgba(255,255,255,0.9) inset;
-  --radius: 16px;
-  --radius-sm: 10px;
+  --success: #1a7a30;
+  --warning: #cc7700;
+  --tag-bg: rgba(0,119,187,0.1);
+  --tag-text: #005a99;
+  --shadow: 0 4px 24px rgba(0,80,160,0.14), 0 1px 0 rgba(255,255,255,0.75) inset;
+  --shadow-card: 0 8px 32px rgba(0,60,140,0.1), 0 1px 0 rgba(255,255,255,0.85) inset, 0 -1px 0 rgba(0,80,160,0.08) inset;
+  --shadow-elevated: 0 12px 48px rgba(0,60,140,0.18), 0 2px 0 rgba(255,255,255,0.9) inset;
+  --radius: 18px;
+  --radius-sm: 12px;
   --radius-btn: 980px;
-  --font: 'Segoe UI', 'Myriad Pro', 'Trebuchet MS', sans-serif;
-  --blur: blur(16px) saturate(200%) brightness(1.1);
-  --topbar-bg: rgba(180,225,255,0.75);
-  --topbar-border: rgba(255,255,255,0.7);
-  --scrollbar: rgba(0,120,200,0.3);
-  --bg-code: rgba(220,240,255,0.7);
-  --aero-shine: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+  --font: 'Segoe UI', 'Myriad Pro', 'Trebuchet MS', Tahoma, sans-serif;
+  --font-display: 'Segoe UI', 'Myriad Pro', 'Trebuchet MS', Tahoma, sans-serif;
+  --blur: blur(18px) saturate(200%) brightness(1.08);
+  --topbar-bg: rgba(160,215,250,0.72);
+  --topbar-border: rgba(255,255,255,0.72);
+  --scrollbar: rgba(0,100,180,0.28);
+  --bg-code: rgba(210,238,255,0.75);
+  --input-shadow-focus: 0 0 0 3px rgba(0,119,187,0.2), 0 0 12px rgba(0,150,255,0.15);
+  --aero-shine: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.12) 48%, transparent 100%);
+  --aero-btn: linear-gradient(180deg, #6ec6f0 0%, #2299dd 48%, #0077bb 100%);
+  --aero-btn-shine: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.08) 50%, transparent 100%);
+  --sidebar-width: 200px;
+}
+
+/* ── Cyberpunk ── */
+[data-theme="cyberpunk"] {
+  --bg: #060610;
+  --bg-solid: #060610;
+  --bg-card: rgba(8,8,20,0.96);
+  --bg-sidebar: rgba(4,4,14,0.99);
+  --bg-input: rgba(12,12,28,0.95);
+  --bg-hover: rgba(0,255,255,0.035);
+  --bg-active: rgba(0,255,255,0.07);
+  --border: rgba(0,255,255,0.18);
+  --border-input: rgba(0,255,255,0.22);
+  --text: #cce8f4;
+  --text-secondary: #5a8090;
+  --text-tertiary: #2a4050;
+  --accent: #00f0ff;
+  --accent-hover: #00d8e8;
+  --accent-text: #000;
+  --accent2: #ff00aa;
+  --accent3: #aaff00;
+  --danger: #ff0044;
+  --success: #00ff88;
+  --warning: #ffcc00;
+  --tag-bg: rgba(0,240,255,0.07);
+  --tag-text: #00f0ff;
+  --shadow: 0 0 16px rgba(0,240,255,0.08), 0 0 48px rgba(0,240,255,0.04);
+  --shadow-card: 0 0 0 1px rgba(0,240,255,0.15), 0 4px 24px rgba(0,0,0,0.9);
+  --shadow-elevated: 0 0 0 1px rgba(0,240,255,0.3), 0 0 24px rgba(0,240,255,0.15), 0 8px 32px rgba(0,0,0,0.95);
+  --radius: 2px;
+  --radius-sm: 2px;
+  --radius-btn: 2px;
+  --font: 'Share Tech Mono', 'Courier New', monospace;
+  --font-display: 'Share Tech Mono', 'Courier New', monospace;
+  --blur: none;
+  --topbar-bg: rgba(4,4,14,0.99);
+  --topbar-border: rgba(0,240,255,0.28);
+  --scrollbar: rgba(0,240,255,0.25);
+  --bg-code: rgba(0,8,18,0.98);
+  --input-shadow-focus: 0 0 0 1px rgba(0,240,255,0.5), 0 0 12px rgba(0,240,255,0.3);
+  --glow: 0 0 8px rgba(0,240,255,0.7), 0 0 20px rgba(0,240,255,0.3);
+  --glow-sm: 0 0 6px rgba(0,240,255,0.5);
+  --glow-danger: 0 0 8px rgba(255,0,68,0.7), 0 0 20px rgba(255,0,68,0.3);
+  --glow-success: 0 0 8px rgba(0,255,136,0.6);
+  --glow-pink: 0 0 8px rgba(255,0,170,0.6);
+  --scanline: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,240,255,0.012) 2px, rgba(0,240,255,0.012) 4px);
+  --sidebar-width: 200px;
 }
